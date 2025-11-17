@@ -1,0 +1,96 @@
+/*****
+ * Nom Prénom
+ * Groupe
+ * Machine
+ *****/
+/******************
+ *** Exercice 1 ***
+ ******************/
+#exo1 {
+    display: none;
+}
+
+
+
+/******************
+ *** Exercice 2 ***
+ ******************/
+menu {
+    list-style-type: lower-greek;
+}
+
+menu > li {
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin: 2px 0;
+    padding: 2px;
+}
+
+menu > li:hover {
+    background-color: lime;
+}
+
+menu > li:first-of-type::before {
+    content: "\01F600";
+}
+
+menu > li:nth-of-type(2)::before {
+    content: "\01F639";
+}
+
+menu > li:nth-of-type(3)::before {
+    content: "\01F47B";
+}
+
+menu > li:nth-of-type(4)::before {
+    content: "\01F47D";
+}
+
+menu > li:last-of-type::before {
+    content: "\01F47E";
+}
+
+
+/******************
+ *** Exercice 3 ***
+ ******************/
+header {
+    text-align: center;
+}
+
+header,
+footer {
+    background-color: aliceblue;
+    border-radius: 10px;
+    border: 2px solid cadetblue;
+    padding: 1em;
+}
+
+footer {
+    height: 150px;
+}
+
+footer img {
+    height: 50px;
+}
+
+footer > * {
+    vertical-align: center;
+}
+
+
+
+
+
+/******************
+ *** Exercice 4 ***
+ ******************/
+
+
+
+
+
+
+/******************
+ *** Bonus ********
+ ******************/
