@@ -17,36 +17,37 @@
  ******************/
 menu {
     list-style-type: lower-greek;
+    max-width: fit-content;
 }
 
-menu > li {
+menu>li {
     border: 1px solid grey;
     border-radius: 10px;
     margin: 2px 0;
     padding: 2px;
 }
 
-menu > li:hover {
+menu>li:hover {
     background-color: lime;
 }
 
-menu > li:first-of-type::before {
+menu>li:first-of-type::before {
     content: "\01F600";
 }
 
-menu > li:nth-of-type(2)::before {
+menu>li:nth-of-type(2)::before {
     content: "\01F639";
 }
 
-menu > li:nth-of-type(3)::before {
+menu>li:nth-of-type(3)::before {
     content: "\01F47B";
 }
 
-menu > li:nth-of-type(4)::before {
+menu>li:nth-of-type(4)::before {
     content: "\01F47D";
 }
 
-menu > li:last-of-type::before {
+menu>li:last-of-type::before {
     content: "\01F47E";
 }
 
@@ -67,26 +68,81 @@ footer {
 }
 
 footer {
-    height: 150px;
+    height: 300px;
 }
 
 footer img {
     height: 50px;
 }
 
-footer > * {
-    vertical-align: center;
+footer {
+    display: flex;
+    place-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 
+aside {
+    position: sticky;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    z-index: 10;
+}
 
 
 
 /******************
  *** Exercice 4 ***
  ******************/
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    min-height: 1030px;
+}
 
+main>#Archimede {
+    order: 0;
+}
 
+main>#Eratosthene {
+    order: 2;
+}
+
+main>#Euclide {
+    order: 3;
+}
+
+main>#Pythagore {
+    order: 4;
+}
+
+main>#Thales {
+    order: 5;
+}
+
+main>article {
+    border: 3px solid lightblue;
+    padding: 0.5em;
+    text-align: justify;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main>article img {
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    order: -1;
+}
+
+main>article h2,
+main>article p {
+    flex: 1;
+    min-width: calc(100% - 80px - 0.5em);
+}
 
 
 
@@ -94,3 +150,13 @@ footer > * {
 /******************
  *** Bonus ********
  ******************/
+
+main {
+    flex-flow: row wrap;
+    gap: 0.75em;
+}
+
+main>article {
+    box-sizing: border-box;
+    max-width: calc(50% - 0.75em);
+}
